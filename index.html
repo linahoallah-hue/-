@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لأنه الله</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f1f6f1;color:#193b2b;font-family:Arial,sans-serif}
+header{background:linear-gradient(135deg,#064e36,#16845c);color:white;text-align:center;padding:30px 15px;border-radius:0 0 28px 28px}
+header h1{font-size:34px;margin:10px}
+header p{font-size:17px}
+main{max-width:700px;margin:auto;padding:15px}
+.card{background:white;padding:20px;margin:15px 0;border-radius:18px;box-shadow:0 3px 12px #00000012}
+h2{color:#08734c}
+button{background:#08734c;color:white;border:0;padding:13px 18px;border-radius:12px;font-size:16px;margin:5px;cursor:pointer}
+button:hover{background:#045333}
+.nav{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.nav button{min-height:65px}
+.content{font-size:19px;line-height:2}
+.hidden{display:none}
+.answer{display:block;width:100%;margin:10px 0}
+footer{text-align:center;padding:25px;color:#527361}
+</style>
+</head>
+<body>
+
+<header>
+<h1>لأنه الله 🤍</h1>
+<p>لأن الله يراك ويسمعك ويعلم ما في قلبك</p>
+<p>﴿ وَهُوَ مَعَكُمْ أَيْنَ مَا كُنْتُمْ ﴾</p>
+</header>
+
+<main>
+<div class="card">
+<h2>مرحباً بك في تطبيق لأنه الله</h2>
+<p class="content">رحلة إيمانية نتعلم فيها ديننا ونقترب من الله بالعلم والذكر والعمل الصالح.</p>
+</div>
+
+<div class="card">
+<h2>أقسام التطبيق</h2>
+<div class="nav">
+<button onclick="show('verses')">📖 آيات قرآنية</button>
+<button onclick="show('hadith')">📚 أحاديث نبوية</button>
+<button onclick="show('azkar')">🕌 الأذكار</button>
+<button onclick="show('quiz')">❓ المسابقة الإسلامية</button>
+<button onclick="show('about')">🤍 عن الحملة</button>
+</div>
+</div>
+
+<section id="verses" class="card hidden">
+<h2>📖 آيات من القرآن الكريم</h2>
+<div id="verseList" class="content"></div>
+</section>
+
+<section id="hadith" class="card hidden">
+<h2>📚 أحاديث نبوية</h2>
+<div id="hadithList" class="content"></div>
+</section>
+
+<section id="azkar" class="card hidden">
+<h2>🕌 الأذكار</h2>
+<div class="content">
+<h3>أذكار متنوعة</h3>
+<p>سبحان الله وبحمده.</p>
+<p>أستغفر الله العظيم وأتوب إليه.</p>
+<p>لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير.</p>
+<p>سبحان الله، والحمد لله، ولا إله إلا الله، والله أكبر.</p>
+<p>اللهم صل وسلم على نبينا محمد.</p>
+<p>حسبي الله لا إله إلا هو عليه توكلت وهو رب العرش العظيم.</p>
+<p>رضيت بالله رباً، وبالإسلام ديناً، وبمحمد ﷺ نبياً.</p>
+</div>
+</section>
+
+<section id="quiz" class="card hidden">
+<h2>🏆 المسابقة الإسلامية</h2>
+<p>100 سؤال إسلامي بنظام صح وخطأ.</p>
+<p id="progress"></p>
+<h3 id="question"></h3>
+<button class="answer" onclick="check(true)">صح
